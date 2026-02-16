@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 int checkLogin(char *login, char *passwd);
-//accepted only if Length = 5 and a number 1 or more digits
+//accepted only if Length 5-8  The first Char not a number and 2 Uppercase or more and 2 digit or more
 int checkValidPass(char *ps,int size);
 
 int main() {
