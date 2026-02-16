@@ -32,13 +32,20 @@ int checkValidPass(char *ps,int size) {
 		if (ps[i]>=48 && ps[i]<=57)
 			count++;
 	}
-	if (count!=0&&size==5) 
+	int uppercase=0;
+	for (i=0;i<size;i++){
+		if (ps[i]>=65 && ps[i]<=90)
+			uppercase++;
+	}
+	if (count&&size>=5&&size<=8) 
 		accepted=1;
+	if (ps[0]>=48&&ps[0]<=57)
+		accepted=0;
 	
 	return accepted;
 }
 int checkLogin(char *login, char *passwd) {
-	if( !strcmp(login, "student1") && !strcmp(passwd, "my505"))
+	if( !strcmp(login, "student1") && !strcmp(passwd, "mPASS505"))
 		return 1;
 	else
 		return 0;
